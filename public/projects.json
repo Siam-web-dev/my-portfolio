@@ -1,0 +1,102 @@
+[
+  {
+    "id": "1",
+    "slug": "fit-log",
+    "title": "Fit Log",
+    "shortDescription": "A workout and fitness web application designed to help users explore workouts and organize their fitness routine.",
+    "description": "Fit Log is a fitness-focused web project featuring a workout library and workout planning experience. It demonstrates my ability to build structured interfaces and work with modern web technologies.",
+    "category": "Fitness Web App",
+    "technologies": [
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+      "REST API"
+    ],
+    "liveUrl": "https://fit-log-nine-psi.vercel.app/",
+    "githubUrl": "",
+    "image": "/images/projects/fit-log.png",
+    "featured": true,
+    "status": "Live",
+    "highlights": [
+      "Workout-focused user interface",
+      "Workout library and planning experience",
+      "Responsive web layout"
+    ],
+    "challenges": [
+      "Structuring exercise routine data efficiently for intuitive client-side browsing",
+      "Designing responsive card grids that remain legible on small mobile viewports during workout sessions",
+      "Handling asynchronous REST API responses cleanly with fallback states"
+    ],
+    "learnings": [
+      "Implementing reusable component architecture with Next.js and Tailwind CSS",
+      "Creating seamless user interactions for filtering and navigating workout categories",
+      "Optimizing web performance and layout shifts for media-rich fitness cards"
+    ]
+  },
+  {
+    "id": "2",
+    "slug": "fresh-mart",
+    "title": "Fresh Mart",
+    "shortDescription": "A fresh grocery shopping website focused on presenting products through a clean shopping interface.",
+    "description": "Fresh Mart is a grocery-related web project built to present products in an organized and user-friendly interface. The project can be showcased as an example of my frontend development and responsive UI work.",
+    "category": "E-commerce",
+    "technologies": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "liveUrl": "https://siam-web-dev.github.io/fresh_mart/",
+    "githubUrl": "https://github.com/siam-web-dev/fresh_mart",
+    "image": "/images/projects/fresh-mart.png",
+    "featured": true,
+    "status": "Live",
+    "highlights": [
+      "Grocery shopping interface",
+      "Product presentation",
+      "Responsive design"
+    ],
+    "challenges": [
+      "Crafting custom responsive layouts using pure CSS flexbox and grid without utility frameworks",
+      "Implementing dynamic client-side filtering and item discovery using vanilla JavaScript DOM manipulation",
+      "Ensuring consistent cross-browser typography and card alignment"
+    ],
+    "learnings": [
+      "Solidified foundational DOM scripting and event-driven JavaScript programming",
+      "Strengthened semantic HTML5 accessibility and mobile-first CSS architecture",
+      "Deploying and managing static web applications via GitHub Pages"
+    ]
+  },
+  {
+    "id": "3",
+    "slug": "devstack",
+    "title": "DevStack",
+    "shortDescription": "A developer-focused web project showcasing technology-related content in a structured interface.",
+    "description": "DevStack is a web project in my development portfolio. Use this page to present its actual purpose, key features, implementation decisions, and the technical skills demonstrated by the project.",
+    "category": "Web Application",
+    "technologies": [
+      "React",
+      "JavaScript",
+      "Tailwind CSS"
+    ],
+    "liveUrl": "https://dev-stack-ashy-one.vercel.app/",
+    "githubUrl": "",
+    "image": "/images/projects/devstack.png",
+    "featured": true,
+    "status": "Live",
+    "highlights": [
+      "Technology-focused interface",
+      "Component-based UI structure",
+      "Project presentation"
+    ],
+    "challenges": [
+      "Designing a cohesive dark aesthetic tailored specifically for developer-facing tools",
+      "Breaking down complex views into modular, reusable React functional components",
+      "Managing UI state effectively across interactive tabs and technology filters"
+    ],
+    "learnings": [
+      "Advanced utility-first styling patterns using modern Tailwind CSS",
+      "Component composition and props management in React applications",
+      "Polishing user experience with smooth hover transitions and micro-interactions"
+    ]
+  }
+]

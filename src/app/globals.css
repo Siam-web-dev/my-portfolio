@@ -1,26 +1,69 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #080a10;
+  --secondary: #0d1019;
+  --card: #111521;
+  --foreground: #f3f5ff;
+  --muted: #9ba3b8;
+  --accent-primary: #8b8dff;
+  --accent-secondary: #69e4f3;
+  --border-color: rgba(255, 255, 255, 0.08);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@theme {
+  --color-brand-bg: #080a10;
+  --color-brand-secondary: #0d1019;
+  --color-brand-card: #111521;
+  --color-brand-card-hover: #161c2c;
+  --color-brand-border: #1e2638;
+  --color-brand-accent: #8b8dff;
+  --color-brand-cyan: #69e4f3;
+  --color-brand-text: #f3f5ff;
+  --color-brand-muted: #9ba3b8;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #080a10;
+  color: #f3f5ff;
+  font-family: var(--font-geist-sans), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Custom background patterns and gradients */
+.bg-grid-pattern {
+  background-size: 48px 48px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+}
+
+.radial-glow-top {
+  background: radial-gradient(circle 800px at 50% -100px, rgba(139, 141, 255, 0.14), transparent 70%);
+}
+
+.radial-glow-accent {
+  background: radial-gradient(circle 600px at 80% 20%, rgba(105, 228, 243, 0.08), transparent 70%);
+}
+
+/* Smooth custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #080a10;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e2638;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2b354d;
+}
+
+/* Focus styles for keyboard accessibility */
+:focus-visible {
+  outline: 2px solid #8b8dff;
+  outline-offset: 2px;
 }
