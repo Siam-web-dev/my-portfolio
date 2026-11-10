@@ -53,7 +53,8 @@ export default function Button({
   );
 
   if (href) {
-    const isInternal = href.startsWith("/") || href.startsWith("#");
+    const isDownload = Boolean(props.download);
+    const isInternal = (href.startsWith("/") || href.startsWith("#")) && !isDownload;
     if (isInternal) {
       return (
         <Link href={href} className={combinedClasses} {...props}>
@@ -65,8 +66,8 @@ export default function Button({
       <a
         href={href}
         className={combinedClasses}
-        target={target || "_blank"}
-        rel={rel || "noopener noreferrer"}
+        target={isDownload ? undefined : (target || "_blank")}
+        rel={isDownload ? undefined : (rel || "noopener noreferrer")}
         {...props}
       >
         {content}

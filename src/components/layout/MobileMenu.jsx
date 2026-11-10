@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { X, ArrowRight, Mail } from "lucide-react";
+import { X, ArrowRight, Mail, Download } from "lucide-react";
 import { GithubIcon, LinkedinIcon, WhatsappIcon } from "@/components/ui/Icons";
 import { profileData } from "@/data/profile";
 import Button from "@/components/ui/Button";
@@ -68,12 +68,24 @@ export default function MobileMenu({ isOpen, onClose, navLinks, currentPath }) {
           );
         })}
 
-        <div className="pt-6 mt-4 border-t border-white/10">
+        <div className="pt-6 mt-4 border-t border-white/10 space-y-3">
+          <Button
+            href={profileData.resumeUrl}
+            download={profileData.resumeFileName}
+            variant="secondary"
+            size="lg"
+            icon={Download}
+            iconPosition="left"
+            className="w-full justify-center border-white/10 hover:border-[#8B8DFF]/40 text-sm"
+            onClick={onClose}
+          >
+            Download Resume
+          </Button>
           <Button
             href="/contact"
             variant="primary"
             size="lg"
-            className="w-full justify-center"
+            className="w-full justify-center text-sm"
             onClick={onClose}
           >
             Let&apos;s Talk

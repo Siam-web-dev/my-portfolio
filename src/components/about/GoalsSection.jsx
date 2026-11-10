@@ -1,8 +1,9 @@
-import { Target, ArrowRight, Mail, FolderGit2 } from "lucide-react";
+import { Target, ArrowRight, Mail, FolderGit2, Download } from "lucide-react";
 import Container from "@/components/ui/Container";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Button from "@/components/ui/Button";
 import { aboutData } from "@/data/experience";
+import { profileData } from "@/data/profile";
 
 export default function GoalsSection() {
   return (
@@ -44,8 +45,18 @@ export default function GoalsSection() {
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
             <Button
-              href="/projects"
+              href={profileData.resumeUrl}
+              download={profileData.resumeFileName}
               variant="primary"
+              size="md"
+              icon={Download}
+              iconPosition="left"
+            >
+              Download Resume
+            </Button>
+            <Button
+              href="/projects"
+              variant="secondary"
               size="md"
               icon={FolderGit2}
               iconPosition="left"
@@ -54,7 +65,7 @@ export default function GoalsSection() {
             </Button>
             <Button
               href="/contact"
-              variant="secondary"
+              variant="outline"
               size="md"
               icon={Mail}
               iconPosition="left"

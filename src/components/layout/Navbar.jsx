@@ -3,9 +3,10 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, Sparkles } from "lucide-react";
+import { Menu, Sparkles, Download } from "lucide-react";
 import Container from "@/components/ui/Container";
 import Button from "@/components/ui/Button";
+import { profileData } from "@/data/profile";
 import MobileMenu from "./MobileMenu";
 
 const navLinks = [
@@ -82,14 +83,24 @@ export default function Navbar() {
             })}
           </nav>
 
-          {/* Right Action: Let's Talk CTA */}
-          <div className="hidden md:flex items-center gap-3">
+          {/* Right Action: Download Resume & Let's Talk CTA */}
+          <div className="hidden md:flex items-center gap-2.5">
+            <Button
+              href={profileData.resumeUrl}
+              download={profileData.resumeFileName}
+              variant="outline"
+              size="sm"
+              icon={Download}
+              className="border-white/10 hover:border-[#8B8DFF]/40 text-xs"
+            >
+              Resume
+            </Button>
             <Button
               href="/contact"
               variant="secondary"
               size="sm"
               icon={Sparkles}
-              className="border-white/10 hover:border-[#8B8DFF]/50"
+              className="border-white/10 hover:border-[#8B8DFF]/50 text-xs"
             >
               Let&apos;s Talk
             </Button>

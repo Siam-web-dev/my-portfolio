@@ -46,12 +46,12 @@ export const aboutData = {
       tags: ["React", "JavaScript (ES6+)", "REST APIs", "Tailwind CSS"],
     },
     {
-      period: "Foundations",
-      title: "Computer Science & Web Foundations",
-      subtitle: "Core Computing Principles & DOM Scripting",
+      period: "Education",
+      title: "Diploma in Computer Science & Technology",
+      subtitle: "Feni Government Computer Institute, Feni, Bangladesh (Final Semester)",
       description:
-        "Studied Computer Science and Technology fundamentals including data structures, algorithms, and web architecture. Developed strong foundational proficiencies in semantic HTML5, pure CSS layouts, and vanilla JavaScript.",
-      tags: ["Computer Science", "HTML5", "CSS3", "JavaScript", "Git"],
+        "Studying core computing principles, algorithms, and web architecture at Feni Government Computer Institute. Built strong foundational proficiencies in responsive web development, semantic markup, and modern JavaScript.",
+      tags: ["Computer Science", "Diploma Engineering", "HTML5", "CSS3", "JavaScript", "Git"],
     },
   ],
   goals: [

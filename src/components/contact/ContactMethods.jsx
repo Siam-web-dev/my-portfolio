@@ -1,9 +1,19 @@
-import { Mail, Phone, ArrowUpRight, MessageSquareCode } from "lucide-react";
+import { Mail, Phone, ArrowUpRight, MessageSquareCode, FileText, Download } from "lucide-react";
 import { GithubIcon, LinkedinIcon, WhatsappIcon } from "@/components/ui/Icons";
 import { profileData } from "@/data/profile";
 
 export default function ContactMethods() {
   const methods = [
+    {
+      name: "Resume / CV",
+      value: "Kamruzzaman_Siam_Resume.pdf",
+      href: profileData.resumeUrl,
+      download: profileData.resumeFileName,
+      icon: FileText,
+      accent: "#FCD34D",
+      actionText: "Download Resume",
+      actionIcon: Download,
+    },
     {
       name: "WhatsApp",
       value: profileData.whatsapp || "01761991079",
@@ -30,7 +40,7 @@ export default function ContactMethods() {
     },
     {
       name: "GitHub",
-      value: "github.com/siam-web-dev",
+      value: "github.com/Siam-web-dev",
       href: profileData.github,
       icon: GithubIcon,
       accent: "#A78BFA",
@@ -81,13 +91,18 @@ export default function ContactMethods() {
               {method.href && (
                 <a
                   href={method.href}
-                  target={method.href.startsWith("http") ? "_blank" : undefined}
-                  rel={method.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                  download={method.download}
+                  target={method.download ? undefined : (method.href.startsWith("http") ? "_blank" : undefined)}
+                  rel={method.download ? undefined : (method.href.startsWith("http") ? "noopener noreferrer" : undefined)}
                   className="p-2 rounded-xl text-[#9BA3B8] hover:text-white hover:bg-white/5 transition-colors flex-shrink-0"
                   aria-label={method.actionText}
                   title={method.actionText}
                 >
-                  <ArrowUpRight className="w-4 h-4 text-[#8B8DFF]" />
+                  {method.actionIcon ? (
+                    <method.actionIcon className="w-4 h-4 text-amber-300" />
+                  ) : (
+                    <ArrowUpRight className="w-4 h-4 text-[#8B8DFF]" />
+                  )}
                 </a>
               )}
             </div>

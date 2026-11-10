@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Mail, ArrowUpRight } from "lucide-react";
+import { Mail, ArrowUpRight, Download } from "lucide-react";
 import { GithubIcon, LinkedinIcon, WhatsappIcon } from "@/components/ui/Icons";
 import Container from "@/components/ui/Container";
 import CurrentYear from "@/components/ui/CurrentYear";
@@ -106,6 +106,16 @@ export default function Footer() {
                 >
                   <Mail className="w-4 h-4 text-[#8B8DFF]" />
                   <span>Email</span>
+                </a>
+              )}
+              {profileData.resumeUrl && (
+                <a
+                  href={profileData.resumeUrl}
+                  download={profileData.resumeFileName}
+                  className="inline-flex items-center gap-2 hover:text-white transition-colors"
+                >
+                  <Download className="w-4 h-4 text-amber-300" />
+                  <span>Download Resume</span>
                 </a>
               )}
             </div>
